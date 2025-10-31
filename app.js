@@ -74,20 +74,10 @@ tabButtons.forEach((btn) => {
 });
 
 // Navigation Bar Disappearance
-// navbar.js
-
 let lastScroll = 0;
 const navbar = document.querySelector('nav');
 
 navbar.classList.remove('show');
-navbar.classList.add('hide');
-
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    navbar.classList.remove('hide');
-    navbar.classList.add('show');
-  }, 500);
-});
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;

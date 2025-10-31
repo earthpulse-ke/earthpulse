@@ -99,6 +99,7 @@ nav {
     background-color: var(--bg);
     box-shadow: var(--shadow);
     z-index: 1000;
+    animation: navbarShow 1s ease-in-out;
     transition: 0.5s ease-out;
 }
 
@@ -190,7 +191,7 @@ nav .icons i:hover::after {
     flex-direction: column;
     align-items: center;
     line-height: 1.5;
-    animation: text-reveal 3s;
+    animation: text-reveal 2.6s;
 }
 
 .hero .text h1 {
@@ -390,7 +391,7 @@ nav .icons i:hover::after {
     transition: all 0.3s ease;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    animation: fadeIn 0.3s ease-in-out
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 #team .tabs-container .tab-buttons .tab-btn:hover {
@@ -412,11 +413,6 @@ nav .icons i:hover::after {
 
 #team .tabs-container .tab-content .tab-panel.active2 {
     display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 /* All Tabs CSS */
@@ -447,7 +443,7 @@ nav .icons i:hover::after {
     position: absolute;
     left: 1rem;
     bottom: 1rem;
-    background-color: var(--text);
+    background-color: hsl(0 0% 5%);
     padding: 0.7rem 1rem;
     border-radius: 100vw;
     color: var(--bg-dark);
@@ -714,7 +710,7 @@ nav .icons i:hover::after {
 #events .event-container .event-card .date {
     position: absolute;
     transform: translate(15%, 50%);
-    background: #443627;
+    background: hsl(0 0% 5%);
     color: #fff;
     padding: 10px;
     border-radius: var(--small-radius);
@@ -976,4 +972,14 @@ footer .footer-socials a i {
     50% {
         transform: translateY(-5px);
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes navbarShow {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(0px); }
 }
